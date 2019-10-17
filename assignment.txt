@@ -1,0 +1,14 @@
+import matplotlib.pylab as plt
+import os
+import numpy as np
+from PIL import image
+photos = np.zero([20.200.200.3])
+rootdir= 'pakimage/'
+cntr = 0
+size = 200,200,3
+for z in os.listdir(rootdir):
+    print(z,cntr)
+    img = image.open(rootdir+z)
+    img.thumbnail(size,image.ANTIALIAS)
+    photos[cntr] = np.asarray(img,dtype="int32")
+    cntr+=1
